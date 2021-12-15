@@ -9,6 +9,6 @@ class GameConfig:
 
 
     def init():
-        GameConfig.BG = pygame.image.load('assets/...')
+        GameConfig.BG = pygame.image.load('assets/Background_1.png')
 
 
