@@ -7,6 +7,10 @@ def getNextMove():
     keys = pygame.key.get_pressed()
     if keys[pygame.K_RIGHT]:
         next_move.right = True
+    if keys[pygame.K_LEFT]:
+        next_move.left = True
+    if keys[pygame.K_RETURN]:
+        next_move.jump = True
 
     return next_move
 
