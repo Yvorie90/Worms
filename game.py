@@ -6,6 +6,7 @@ from game_config import GameConfig
 
 
 def gameloop(window):
+    quit = False
 
 
 
