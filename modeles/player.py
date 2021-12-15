@@ -8,6 +8,7 @@ class Player(pygame.sprite.Sprite):
         self.image = GameConfig.P1_IMG
         self.vx = 0
         self.vy = 0
+        self.wpon = 0 # 0 = pas d'arme
 
     def draw(self, window):
         window.blit(self.image, self.rect.topleft)

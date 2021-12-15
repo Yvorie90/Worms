@@ -10,6 +10,7 @@ class GameState:
     def draw(self, window):
         window.blit(GameConfig.BG, (0,0))
         self.player.draw(window)
+        #draw un icone en haut a droite avec le vent
 
     def advanceState(self,next_move):
         self.player.advanceState(next_move)
