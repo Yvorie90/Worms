@@ -1,5 +1,19 @@
 import pygame
-pygame.init()
+from game_config import GameConfig
 
-class main():
-    a = 0
+
+
+
+
+def gameloop(window):
+
+
+
+
+
+
+if __name__ == '__main__':
+    pygame.init()
+    horloge = pygame.time.Clock()
+    window = pygame.display.set_mode(GameConfig.WINDOW_W,GameConfig.WINDOW_H)
+    pygame.display.set_caption("Worms du pauvre")
