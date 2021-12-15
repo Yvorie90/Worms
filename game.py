@@ -1,9 +1,9 @@
 import pygame
-from game_config import *
 from game_state import *
 
 
-
+def getNextMove():
+    next_move = Move()
 
 def gameloop(window, horloge):
     quit = False
@@ -28,5 +28,5 @@ if __name__ == '__main__':
     window = pygame.display.set_mode((GameConfig.WINDOW_W,GameConfig.WINDOW_H))
     pygame.display.set_caption("Worms du pauvre")
     GameConfig.init()
-
+    #loop menu et restart
     gameloop(window, horloge)
