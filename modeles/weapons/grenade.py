@@ -1,6 +1,6 @@
-from game_config import GameConfig
-import weapon
+from Worms.game_config import *
+from Worms.modeles.weapons.weapon import *
 
-class Grenade(weapon):
+class Grenade(Weapon):
     def __init__(self):
-
+        pygame.draw.circle()

@@ -1,5 +1,8 @@
 import pygame
-from game_config import *
+from Worms.game_config import *
+from Worms.modeles.weapons.weapon import *
+from Worms.modeles.weapons.grenade import *
+
 
 class Player(pygame.sprite.Sprite):
 
@@ -48,4 +51,6 @@ class Player(pygame.sprite.Sprite):
 
         self.rect = self.rect.move(self.vx * GameConfig.DT, self.vy * GameConfig.DT)
 
+    def lancer_pojectile(self):
+        pojectil = Grenade()
 

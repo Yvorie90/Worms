@@ -14,3 +14,6 @@ class GameState:
 
     def advanceState(self,next_move):
         self.player.advanceState(next_move)
+
+    def proj(self):
+        self.player.lancer_pojectile()

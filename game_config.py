@@ -17,5 +17,5 @@ class GameConfig:
     def init():
         GameConfig.BG = pygame.image.load('assets/background.png')
         GameConfig.P1_IMG = pygame.image.load("assets/player/p.png")
-        GameConfig.W1_IMG = pygame.image.load("assets/weapons/g.png")
+        #GameConfig.W1_IMG = pygame.image.load("assets/weapons/g.png")
 

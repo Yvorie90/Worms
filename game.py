@@ -25,9 +25,12 @@ def gameloop(window, horloge):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 quit = True
-
+            if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+                quit = True
+            if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
+                gameState.proj()
         gameState.advanceState(getNextMove())
-        pygame.time.delay(20)
+        pygame.time.delay(2)
         pygame.display.update()
 
 
