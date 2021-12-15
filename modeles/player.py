@@ -22,12 +22,14 @@ class Player(pygame.sprite.Sprite):
             fx = -20
         if next_move.right:
             fx = 20
+        if next_move.right and next_move.left:
+            fx = 0
         if next_move.jump:
             fy = -100
 
         self.vx = fx * GameConfig.DT
         if self.on_ground():
-            self.vy = 0
+            self.vy = fy * GameConfig.DT
         else:
             self.vy = self.vy + GameConfig.GRAVITY * GameConfig.DT
 
