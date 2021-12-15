@@ -1,9 +1,15 @@
 import pygame
 from game_state import *
-
+from modeles.move import *
 
 def getNextMove():
     next_move = Move()
+    keys = pygame.key.get_pressed()
+    if keys[pygame.K_RIGHT]:
+        next_move.right = True
+
+    return next_move
+
 
 def gameloop(window, horloge):
     quit = False
@@ -16,7 +22,7 @@ def gameloop(window, horloge):
             if event.type == pygame.QUIT:
                 quit = True
 
-        #gameState.advanceState(getNextMove())
+        gameState.advanceState(getNextMove())
         pygame.time.delay(20)
         pygame.display.update()
 
