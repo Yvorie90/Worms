@@ -66,6 +66,7 @@ class Player(pygame.sprite.Sprite) :
     def on_ground(self) :
         return self.rect.bottom == GameConfig.Y_PLATEFORM
 
+    # Source : https://askcodez.com/comment-faire-pivoter-une-image-autour-de-son-centre-a-laide-de-pygame.html
     def rot_center(self, image, angle):
         w, h = image.get_size()
         box = [pygame.math.Vector2(p) for p in [(0, 0), (w, 0), (w, -h), (0, -h)]]
@@ -81,7 +82,7 @@ class Player(pygame.sprite.Sprite) :
         self.arrow_image.get_rect().move(origin)
         pygame.display.flip()
 
-    def advance_state(self, next_move, window):
+    def advance_state(self, next_move):
         # Acceleration
         fx = 0
         fy = 0

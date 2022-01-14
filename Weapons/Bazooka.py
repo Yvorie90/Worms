@@ -52,8 +52,4 @@ class Bazooka(Weapons.Weapons):
         self.vy = min(self.vy, vy_max)
         # Position
         x = self.rect.left
-        # vx_min = -x / GameConfig.DT
-        # vx_max = (GameConfig.WINDOW_W - GameConfig.PLAYER_W - x) / GameConfig.DT
-        # self.vx = min(self.vx, vx_max)
-        # self.vx = max(self.vx, vx_min)
         self.rect = self.rect.move(self.vx * GameConfig.DT, self.vy * GameConfig.DT)

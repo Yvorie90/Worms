@@ -9,7 +9,6 @@ from Weapons.FusilAPompe import FusilAPompe
 
 class GameState :
     def __init__(self) :
-        #list
         self.player = Player(20)
         self.weapon = None
         self.truc = False
@@ -63,7 +62,7 @@ class GameState :
             self.random_wind()
             self.wind_counter = 0
             print(self.wind_direction, self.wind_power)
-        self.player.advance_state(next_move, window)
+        self.player.advance_state(next_move)
         if next_move.fire :
             self.truc = True
         if next_move.grenade:
