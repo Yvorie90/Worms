@@ -33,10 +33,10 @@ class Grenade(Weapons.Weapons):
     def draw(self, window):
         window.blit(self.image, (self.rect.left, self.rect.top))
 
-    def advance_state(self, fx, fy):
-        if not fx == 0:
+    def advance_state(self, fx, fy, wind_x, wind_y):
+        if not fx == 0 and not fx == wind_x:
             self.initfx = fx
-        if not fy == 0:
+        if not fy == 0 and not fy == wind_y:
             self.initfy = fy
         # Vitesse
         if self.on_ground():
@@ -45,7 +45,8 @@ class Grenade(Weapons.Weapons):
             self.vy = self.initfy
             self.vx = self.initfx
 
-        if self.vx <= 0.001:
+
+        if self.vx <= 0.05 and self.on_ground():
             self.exist = False
 
         else:
