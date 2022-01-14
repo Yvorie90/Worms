@@ -28,6 +28,12 @@ def get_next_move() :
         next_move.power_plus = True
     if keys[pygame.K_q]:
         next_move.power_minus = True
+    if keys[pygame.K_z]:
+        next_move.grenade = True
+    if keys[pygame.K_e]:
+        next_move.bazooka = True
+    if keys[pygame.K_r]:
+        next_move.pompe = True
 
     return next_move
 

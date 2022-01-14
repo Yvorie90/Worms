@@ -3,7 +3,7 @@ from Weapons import Weapons
 
 
 
-class Grenade(Weapons.Weapons):
+class Bazooka(Weapons.Weapons):
 
     def __init__(self, player):
         self.rect = pygame.Rect(
@@ -24,8 +24,8 @@ class Grenade(Weapons.Weapons):
         self.degats = GameConfig.GRENADE_DEGATS
         self.image = GameConfig.GRENADE_IMG
 
-        self.initfx = None
-        self.initfy = None
+        self.initfx = 0
+        self.initfy = 0
 
     def on_ground(self) :
         return self.rect.bottom == GameConfig.Y_PLATEFORM
@@ -34,17 +34,10 @@ class Grenade(Weapons.Weapons):
         window.blit(self.image, (self.rect.left, self.rect.top))
 
     def advance_state(self, fx, fy, wind_x, wind_y):
-        if not fx == wind_x:
-            self.initfx = fx
-        if not fy == wind_y:
-            self.initfy = fy
         # Vitesse
         if self.on_ground():
-            self.initfy /= 1.7
-            self.initfx /= 1.7
-            self.vy = self.initfy
-            self.vx = self.initfx
-
+            self.vy = fy * GameConfig.DT
+            self.vx = fx * GameConfig.DT
 
         if self.vx <= 0.05 and self.on_ground():
             self.exist = False

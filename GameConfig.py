@@ -1,4 +1,5 @@
 import pygame.image
+import pygame.font
 
 
 class GameConfig :
@@ -68,11 +69,9 @@ class GameConfig :
 
     # Grenade
 
-    GRENADE_IMG = pygame.image.load("Ressources/Assets/R1.png")
+    GRENADE_IMG = pygame.image.load("Ressources/Assets/Grenade.png")
     GRENADE_RANGE = 10
     GRENADE_DEGATS = 5
-    GRENADE_H = 16
-    GRENADE_W = 16
 
     # Progress Bar
 
@@ -83,4 +82,8 @@ class GameConfig :
 
     WIND_DIRECTION = 100
     WIND_POWER = 3
+
+    # Explosion
+
+    EXPLOSION = pygame.image.load("Ressources/Assets/Explosion.gif")
 

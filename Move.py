@@ -9,3 +9,7 @@ class Move :
         self.arrow_right = False
         self.power_plus = False
         self.power_minus = False
+
+        self.grenade = False
+        self.bazooka = False
+        self.pompe = False
